@@ -1,3 +1,202 @@
-h1 {
-  color: peru;
+:root {
+  --primary: #000;
+  --secondary: #89c249;
+  --accent: #8bc34a;
+  --secondary-accent: #5e7c3b;
+  --shadow: #425230;
+  --app-bg: #fdf9ce;
+  --border: #5a7739;
+  --gradient: linear-gradient(
+    180deg,
+    rgb(182, 236, 177) 0%,
+    rgb(132, 197, 137) 59%,
+    rgb(148, 190, 113) 100%
+  );
+
+  --font-size-one: calc(0.5rem + 0.9vw);
+  --font-size-two: calc(0.4rem + 0.5vw);
+  --font-size-time: calc(0.4rem + 0.7vw);
+  --font-size-three: calc(0.2rem + 0.5vw);
+  --font-size-small: calc(0.2rem + 0.5vw);
+  --font-size-heading: calc(1.8rem + 1vw);
+  --font-size-switches: calc(0.3rem + 0.4vw);
+  --font-size-small-img: calc(0.8rem + 0.8vw);
+}
+
+[data-theme="dark"] {
+  --primary: #fdf9ce;
+  --secondary: #89c249;
+  --accent: #5e7c3b;
+  --secondary-accent: #67a521;
+  --shadow: rgba(41, 41, 41, 0.521);
+  --app-bg: #424242;
+  --border: #2c2c2c;
+  --gradient: #212121;
+}
+
+body {
+  background: var(--gradient) fixed;
+  color: var(--primary);
+}
+
+.app-container {
+  margin: 30px auto 10px;
+  max-width: 720px;
+}
+
+.just-app {
+  background: var(--app-bg);
+  border: var(--border);
+  font-family: "Poppins", sans-serif;
+}
+
+.searchField {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.search-bar {
+  width: calc(10rem + 10vw);
+  font-size: var(--font-size-two);
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  transition: all 0ms ease-in-out;
+}
+
+.search-bar:focus {
+  box-shadow: 0px 0px 0px 3px var(--shadow);
+}
+
+.search-button {
+  font-size: var(--font-size-two);
+  background-color: var(--secondary);
+  color: #fff;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  padding-left: 5px;
+  transition: all 100ms ease-in-out;
+}
+
+.search-button:hover {
+  opacity: 0.8;
+}
+
+.locator-field {
+  font-size: var(--font-size-two);
+  color: var(--secondary);
+  text-shadow: 2px 2px 2px var(--shadow);
+  padding-left: 5px;
+  transition: all 100ms ease-in-out;
+}
+
+.locator-field:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.toggles {
+  font-size: var(--font-size-switches);
+  padding-top: 5px;
+}
+
+input.form-check-input:not(:focus) {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+input.form-check-input:focus {
+  box-shadow: none;
+  border-color: var(--secondary);
+}
+
+input.form-check-input:focus:not(:checked) {
+  background-color: var(--secondary);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+input.form-check-input[type="checkbox"]:checked {
+  background-color: var(--secondary);
+  border-color: var(--border);
+}
+
+.header {
+  text-align: center;
+  margin: 15px auto 10px;
+}
+
+.date {
+  font-size: var(--font-size-one);
+  margin: auto;
+}
+
+.current-time {
+  font-size: var(--font-size-time);
+  margin-top: 5px;
+}
+
+.selected-city {
+  font-size: var(--font-size-heading);
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.local-time {
+  font-size: var(--font-size-two);
+}
+
+.current-weather {
+  margin: 0px auto 5px;
+}
+
+.current-condition {
+  text-align: center;
+  line-height: 1.2;
+}
+
+.current-weather-pic {
+  font-size: calc(4rem + 3vw);
+}
+
+.current-description {
+  font-size: var(--font-size-two);
+  text-transform: capitalize;
+}
+
+.current-temp {
+  text-align: center;
+  padding: 0px;
+}
+
+.real-temp-together {
+  font-size: var(--font-size-heading);
+}
+
+.real-feel {
+  font-size: var(--font-size-two);
+}
+
+.current-extra {
+  font-size: var(--font-size-two);
+  text-align: left;
+  list-style: none;
+  margin-bottom: 0px;
+  padding-left: 1vw;
+}
+
+.footer {
+  text-align: center;
+  font-family: "Cousine", monospace;
+  font-size: var(--font-size-small);
+  margin-top: 10px;
+}
+
+.gitHub {
+  text-decoration: none;
+  color: var(--secondary-accent);
+}
+
+.gitHub:hover {
+  text-decoration: underline;
+  color: var(--secondary-accent);
 }

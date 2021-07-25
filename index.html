@@ -6,18 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cousine&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="src/luxon.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Sues Vanilla Final</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Hello world</h1>
-      <a href="" class="btn btn-primary">Click me</a>
+    <div class="container app-container">
+      <div class="just-app">
+        <div class="row">
+          <div class="col"></div>
+
+          <div class="col-8">
+          <form class="searchField">
+            <input type="text"
+                placeholder="Search"
+                class="search-bar"
+                id="search-text-input"/>
+                <button class="search-button" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+              <span>
+                <i class="bi bi-geo-alt-fill locator-field"></i>
+              </span>
+          </form>
+          </div>
+<div class="col toggles">
+            <div>
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input dark-switch"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  >Dark mode</label
+                >
+              </div>
+            </div>
+            <div>
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input unit-switcher"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  >Metric</label
+                >
+              </div>
+        </div>
+      </div>
     </div>
+
+    <section class="header">
+      <h2 class="date">Sunday, July 26</h2>
+      <h3 class="current-time">6:30AM</h3>
+      <h1 class="selected-city">New York, NY</h1>
+      <h3 class="local-time">6:30AM</h3>
+    </section>
+
+ <section class="current-weather">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-3 current-condition">
+              <div class="current-weather-pic">
+                <i class="bi bi-cloud-sun current-img"></i>
+              </div>
+              <div class="current-description">Sunny</div>
+            </div>
+
+             <div class="col-3 p-0 current-temp">
+              <div class="real-temp-together">
+                <span class="real-temp temperature">107</span
+                ><span class="temp-unit">°F</span>
+              </div>
+    <div class="real-feel">
+                Feels like
+                <span class="real-feel-temp temperature">101</span
+                ><span class="temp-unit">°F</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="current-extra">
+                <div>
+                  Wind
+                  <span class="wind-speed">2</span
+                  ><span class="wind-unit"> mph</span>
+                </div>
+                <div>Humidity <span class="humidity">60</span>%</div>
+                <div>Precipitation <span class="precip-percent">0</span>%</div>
+                <div>UV Index <span class="uv-index">Moderate</span></div>
+              </div>
+            </div>
+          </div>
+ <section class="forecast">
+          <div class="row align-items-center fiveday-forecast"></div>
+        </section>
+      </div>
+      
+      <section class="footer">
+        <div class="owner">
+          <a
+            href="https://github.com/SudyB/vanilla-weather-app"
+            class="gitHub"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Sue Buchanan :)
+        </div>
+      </section>
+    </div>
+
     <script src="src/app.js"></script>
   </body>
 </html>

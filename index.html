@@ -22,7 +22,7 @@
       rel="stylesheet"
     />
     <script src="src/luxon.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Sues Vanilla Final</title>
   </head>
   <body>
@@ -32,10 +32,10 @@
           <div class="col"></div>
 
           <div class="col-8">
-          <form class="searchField">
-            <input type="text"
-                placeholder="Search"
-                class="search-bar"
+          <form id="search-form">
+            <input type="search"
+                placeholder="Type a city..."
+                class="form-control search-bar"
                 id="search-text-input"/>
                 <button class="search-button" type="submit">
                 <i class="bi bi-search"></i>
@@ -75,8 +75,8 @@
 
     <section class="header">
       <h2 class="date">Sunday, July 26</h2>
-      <h3 class="current-time">6:30AM</h3>
-      <h1 class="selected-city">New York, NY</h1>
+      <h3 class="current-time" id="time">6:30AM</h3>
+      <h1 class="selected-city" id="city">New York, NY</h1>
       <h3 class="local-time">6:30AM</h3>
     </section>
 
@@ -91,7 +91,7 @@
 
              <div class="col-3 p-0 current-temp">
               <div class="real-temp-together">
-                <span class="real-temp temperature">107</span
+                <span class="real-temp temperature" id="temperature">107</span
                 ><span class="temp-unit">°F</span>
               </div>
     <div class="real-feel">
@@ -101,7 +101,7 @@
               </div>
             </div>
             <div class="col-3">
-              <div class="current-extra">
+              <div class="current-extra" id="description">
                 <div>
                   Wind
                   <span class="wind-speed">2</span
